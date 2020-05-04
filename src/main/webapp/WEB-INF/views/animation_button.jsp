@@ -9,46 +9,17 @@
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css?family=Droid+Serif');
 
-$button-color: #4A90E2;
-$transition-time: 750ms;
-
-.container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	background-color: #ededed;
-	font-family: 'Droid Serif', serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.button {
-	position: relative;
-	display: inline-flex;
-	text-decoration: none;
-	color: #fff;
-	background-color: lighten($button-color, 10%);
-	padding-left: 2rem;
-	overflow: hidden;
-	z-index: 1;
-	align-items: center;
-	box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.75);
-	
-	&::before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		transform: scaleX(0);
-		transform-origin: 0 50%;
-		width: 100%;
-		height: 100%;
-		background-color: $button-color;
-		z-index: -1;
-		transition: transform $transition-time;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		background-color: white;
+		font-family: 'Droid Serif', serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
-	
+
 	span {
 		display: flex;
 		align-items: center;
@@ -56,9 +27,9 @@ $transition-time: 750ms;
 		margin-left: 2rem;
 		padding: 1rem;
 		overflow: hidden;
-		background-color: $button-color;
+		background-color: #4A90E2;
 	}
-	
+
 	svg {
 		max-width: 20px;
 		width: 100%;
@@ -66,38 +37,33 @@ $transition-time: 750ms;
 		max-height: 18px;
 		fill: white;
 	}
-	
-	&:hover {
-		
-		&::before {
-			transform: scaleX(1);
-		}
-		
-		svg {
-			animation: moveArrow $transition-time;
-		}
-		
+
+	.button {
+		position: relative;
+		display: inline-flex;
+		text-decoration: none;
+		color: black;
+		background-color: #4A90E2;
+		padding-left: 2rem;
+		overflow: hidden;
+		z-index: 1;
+		align-items: center;
+		box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.75);
 	}
 	
-}
+	span:hover{	
+		animation: moveArrow 750ms;
+	}
 
 @keyframes moveArrow {
 	
-	0% {
-		transform: translateX(0px);
-	}
+	0% {transform: translateX(0px);}
 	
-	49% {
-		transform: translateX(50px);
-	}
+	49% {transform: translateX(50px);}
 	
-	50% {
-		transform: translateX(-50px);
-	}
+	50% {transform: translateX(-30px);}
 	
-	100% {
-		transform: translateX(0px);
-	}
+	100% {transform: translateX(0px);}
 	
 }
 </style>
@@ -114,21 +80,19 @@ $transition-time: 750ms;
   </defs>
 </svg>
 
-<div class="container">
-	
+<div class="container">	
 	<div class="content">
 		
 		<a href="#" class="button">
 			Button Text
 			<span>
 				<svg>
-					<use xlink:href="#arrow" href="#arrow"></use>
+					<use xlink:href="#arrow" href="#arrow"/>
 				</svg>
 			</span>
 		</a>
 		
-	</div>
-	
+	</div>	
 </div>
 
 </body>
