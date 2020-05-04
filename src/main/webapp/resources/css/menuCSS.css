@@ -1,16 +1,5 @@
 @charset "EUC-KR";
 
-// Colors
-$color-primary: #0c8040;
-$color-secondary: #626262;
-$color-border: #ccd7d7;
-
-// Media Queries breakpoints
-$small: 480px;
-$medium: 768px;
-$large: 992px;
-$x-large: 1200px;
-
 @mixin hide-menu-items($index) {
   &:nth-child(n + #{$index + 1}) {
     display: none;
@@ -35,7 +24,7 @@ a {
 
 .navigation {
   width: 100%;
-  border-bottom: 3px solid $color-border;
+  border-bottom: 3px solid #ccd7d7;
   font-family: 'Pathway Gothic One', sans-serif;
   font-size: 22px;
 }
@@ -52,15 +41,15 @@ a {
   display: inline-block;
     white-space: nowrap;
 
-  @media screen and (max-width: $small) {
+  @media screen and (max-width: 480px) {
     @include hide-menu-items(2);
   }
 
-  @media screen and (max-width: $medium) {
+  @media screen and (max-width: 768px) {
     @include hide-menu-items(3);
   }
 
-  @media screen and (max-width: $large) {
+  @media screen and (max-width: 992px) {
     @include hide-menu-items(4);
   }
 
@@ -72,7 +61,7 @@ a {
 .menu__link {
   display: block;
   padding: 6px 30px 3px;
-  border-right: 2px dotted $color-border;
+  border-right: 2px dotted #ccd7d7;
 
   &:hover,
   &:focus {
@@ -85,7 +74,7 @@ a {
     }
   }
 
-  @media screen and (min-width: $medium) {
+  @media screen and (min-width: 768px) {
     padding: 6px 40px 3px;
   }
 }
@@ -110,19 +99,19 @@ a {
 
 
 .menu__first-word {
-  color: $color-primary;
+  color: #0c8040;
 }
 
 .menu__first-word:before{
 	top: 105%;
-    color: $color-secondary;
+    color: #626262;
 }
 
 .menu__second-word {
-  color: $color-secondary;
+  color: #626262;
 }
 
 .menu__second-word:before{	
 	bottom: 105%;
-    color: $color-primary; 
+    color: #0c8040; 
 }

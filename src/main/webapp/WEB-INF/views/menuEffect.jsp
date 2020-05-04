@@ -13,6 +13,7 @@
 <body>
 <nav class="navigation">
     <ul class="menu">
+    
         <li class="menu__item">
             <a href="#" class="menu__link">
                 <span class="menu__title">
@@ -90,6 +91,7 @@
                 </span>
             </a>
         </li>
+        
     </ul>
 </nav>
 </body>
