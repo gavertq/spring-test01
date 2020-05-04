@@ -55,16 +55,11 @@
 		animation: moveArrow 750ms;
 	}
 
-@keyframes moveArrow {
-	
-	0% {transform: translateX(0px);}
-	
-	49% {transform: translateX(50px);}
-	
+@keyframes moveArrow {	
+	0% {transform: translateX(0px);}	
+	49% {transform: translateX(50px);}	
 	50% {transform: translateX(-30px);}
-	
-	100% {transform: translateX(0px);}
-	
+	100% {transform: translateX(0px);}	
 }
 </style>
 

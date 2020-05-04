@@ -20,4 +20,24 @@ public class AnimationTestController {
 	public String button() {
 		return	"animation_button";
 	}
+	
+	@RequestMapping("rainbowEffect")
+	public String rainbowEffect() {
+		return "rainbow_effect";
+	}
+	
+	@RequestMapping("lightEffect")
+	public String lightEffect() {
+		return "light_effect";
+	}
+	
+	@RequestMapping("hamEffect")
+	public String hamEffect() {
+		return "hamburgerIconEffect";
+	}
+	
+	@RequestMapping("hoverEffect")
+	public String hoverEffect() {
+		return "hoverEffect";
+	}
 }
