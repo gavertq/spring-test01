@@ -40,4 +40,9 @@ public class AnimationTestController {
 	public String hoverEffect() {
 		return "hoverEffect";
 	}
+	
+	@RequestMapping("menuEffect")
+	public String menuEffect() {
+		return "menuEffect";
+	}
 }
